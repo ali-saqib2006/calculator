@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="paper-cost-section">
+      <h2>Paper Cost Calculator</h2>
+      <div class="input-group">
+        <label for="length">Length (in inches):</label>
+        <input type="number" id="length" oninput="checkInputs()">
+      </div>
+      <div class="input-group">
+        <label for="width">Width (in inches):</label>
+        <input type="number" id="width" oninput="checkInputs()">
+      </div>
+      <div class="input-group">
+        <label for="grams">Grams:</label>
+        <input type="number" id="grams" oninput="checkInputs()">
+      </div>
+      <div class="input-group">
+        <label for="paperRate">Paper Rate:</label>
+        <input type="number" id="paperRate" oninput="checkInputs()">
+      </div>
+      <button onclick="calculatePaperCost()">Calculate Paper Cost</button>
+      <div id="paperCostResult"></div>
+      <input type="hidden" id="paperCost">
+    </div>
+    
+    <div class="carton-cost-section">
+      <h2>Carton Cost Calculator</h2>
+      <div class="input-group">
+        <label for="ply">Ply:</label>
+        <input type="number" id="ply" oninput="checkInputs()">
+      </div>
+      <div class="input-group">
+        <label for="cutSheetWidth">Cut Sheet Width (in inches):</label>
+        <input type="number" id="cutSheetWidth" oninput="checkInputs()">
+      </div>
+      <div class="input-group">
+        <label for="cutSheetLength">Cut Sheet Length (in inches):</label>
+        <input type="number" id="cutSheetLength" oninput="checkInputs()">
+      </div>
+      <div class="input-group">
+        <label for="naliRate">Nali Rate:</label>
+        <input type="number" id="naliRate" oninput="checkInputs()">
+      </div>
+      <div class="input-group">
+        <label for="rollLength">Roll Length (in inches):</label>
+        <input type="number" id="rollLength" oninput="checkInputs()">
+      </div>
+      <div class="input-group">
+        <label for="leg">Leg:</label>
+        <input type="number" id="leg" oninput="checkInputs()">
+      </div>
+      <button onclick="calculateCartonCost()">Calculate Carton Cost</button>
+      <div id="cartonCostResult"></div>
+      <input type="hidden" id="cartonCost">
+    </div>
+
+    <div class="total-cost-section">
+      <button id="calculateTotalButton" onclick="calculateTotalDirectly()" style="display: none;">Calculate Total Cost</button>
+      <div id="totalCostResult" class="total-cost-result"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
